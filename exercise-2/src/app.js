@@ -23,6 +23,11 @@ const toggleTaskElementEdit = (id) => {
   updateTask(task);  
 };
 
+const deleteTaskElement = (id) => {
+  removeTask(id);
+  deleteTaskFromList(id);
+};
+
 const toggleTaskCompletion = (id) => {
   const task = getTask(id);
   task.isCompleted = !task.isCompleted;
