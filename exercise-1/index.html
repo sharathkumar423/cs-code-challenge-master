@@ -11,6 +11,7 @@
 </head>
 <body>
     <div class="append-here" >
+        <h1>List of Members</h1>
         <script id="template" type="text/x-handlebars-template">  
             <div id="list-item">
                 <div id="avatar">
@@ -24,7 +25,7 @@
                 </div>
                 <div id="update-list-item">
                     <button onclick="showDetails({{this.id}})">Show Details</button>
-                    <button>Remove</button>
+                    <button onclick="removeId({{this.id}})">Remove</button>
                 </div>
             </div>
         </script>

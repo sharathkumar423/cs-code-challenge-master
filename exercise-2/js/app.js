@@ -24,17 +24,23 @@ var createNewTaskElement = function(taskString, arr) {
   listItem.appendChild(editInput);
   listItem.appendChild(editButton);
   listItem.appendChild(deleteButton);
+  localStorage.setItem(listItem, listItem);
 
   return listItem;
 };
 
 var addTask = function () {
   var listItemName = taskInput.value || "New Item"
-  listItem = createNewTaskElement(listItemName)
-  incompleteTasksHolder.appendChild(listItem)
-  bindTaskEvents(listItem, taskCompleted)
-  taskInput.value = "";
+  if (taskInput.value) {
+    listItem = createNewTaskElement(listItemName)
+    incompleteTasksHolder.appendChild(listItem)
+    incompleteTasksHolder.appendChild(listItem)
+    bindTaskEvents(listItem, taskCompleted)
+    taskInput.value = "";  
+  }
 };
+
+
 
 var editTask = function () {
   var listItem = this.parentNode;

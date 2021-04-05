@@ -4,10 +4,11 @@ html body {
   color: #333;
   font-family: Lato, sans-serif; }
 
-html body .container {
+html body .flex-container {
   display: block;
-  width: 600px;
-  margin: 100px auto 0; }
+  width: 100%;
+  max-width: 375px;
+  margin: auto; }
 
 html body ul {
   margin: 0px;
@@ -65,7 +66,7 @@ html body input[type="text"] :focus {
 /* New Task */
 html body input#new-task {
   float: left;
-  width: 318px; }
+  width: 293px; }
 
 html body p > button :hover {
   color: #0FC57C; }
@@ -84,11 +85,11 @@ html body li > input[type="checkbox"] {
 html body li > label {
   font-size: 18px;
   line-height: 40px;
-  width: 237px;
+  width: 211px;
   padding: 0 0 0 11px; }
 
 html body li > input[type="text"] {
-  width: 226px; }
+  width: 200px; }
 
 html body li > .delete :hover {
   color: #CF2323; }
@@ -111,5 +112,9 @@ html body ul li.editMode label {
 :focus {
   outline: 3px solid black;
   z-index: 999; }
+
+#new-task-label {
+  display: block;
+  margin: 0 0 20px; }
 
 /*# sourceMappingURL=index.css.map */
